@@ -1,0 +1,253 @@
+/* Custom Property */
+:root {
+  /* font color  */
+  --font-color-primary: rgb(191,192,204);
+
+  /* persian font  */
+  --persian-font-name : 'Vazirmatn';
+  --persian-font-name-bold : 'Vazirmatn-Bold';
+
+  /* english font */
+  --english-font-name : 'Roboto';
+
+  /* margin  */
+  --primary-margin: 4em;
+  --note-margin: 1em;
+
+  /* background  */
+  --background-image: url(./images/background.jpg);
+  --background-color: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  --background-color-old : -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+}
+
+/* persian font face */
+@font-face {
+  font-family: Vazirmatn;
+  src: url('./fonts/Vazirmatn-Regular.woff2') format('woff2'),
+       url('./fonts/Vazirmatn-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Vazirmatn-Bold;
+  src: url('./fonts/Vazirmatn-Bold.woff2') format('woff2' ),
+       url('./fonts/Vazirmatn-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* english fontface */
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto/Roboto-Regular.ttf') format('truetype'); 
+}
+
+
+/* body section  */
+body {
+  font-size: 100%;
+  margin: auto;
+  margin-inline: auto;
+  background: var(--background-color-old);
+  background: var(--background-color);
+  color: var(--font-color-primary);
+  font-family: var(--english-font-name);
+}
+
+/* background image  */
+body::after {
+  content: "";
+  background: var(--background-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+/* primary margin used for consist margin across columns */
+.primary-margin {
+  width: auto;
+  margin-left: var(--primary-margin);
+  margin-right: var(--primary-margin);
+  /* width: 70em; */
+
+}
+
+.menu-margin {
+  margin-right: -5em;
+}
+
+/* primary border adds a border across content sections  */
+.primary-border {
+  border-style: solid ;
+  border-radius: 1.50rem;
+  margin-top: 1.5em;
+}
+
+/* title is used for header section  */
+.title {
+  color: var(--font-color-primary);
+  word-wrap:normal;
+  text-align: center;
+}
+
+.container {
+  border: 1px solid var(--font-color-primary);
+  display: block;
+  list-style-type: none;
+  list-style: none;
+}
+
+/* persian content are for chaging default persian font to vazirmatn */
+.persian-content {
+  font : normal 12px var(--persian-font-name);
+}
+.english-content {
+  font : normal 12px var(--english-font-name);
+}
+
+
+.note-right {
+  color: var(--font-color-primary);
+  margin-right: var(--note-margin)
+}
+.note-left {
+  color: var(--font-color-primary);
+  margin-left: var(--note-margin)
+}
+
+.note-margin {
+  margin-right: var(--note-margin)
+} 
+
+.normal-text {
+  color: var(--font-color-primary);
+  padding-top: calc( 2 * var(--note-margin))
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 1%;
+}
+
+li {
+  color: var(--font-color-primary);
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+/* footer  */
+.footer {
+  font-size: 0.7rem;
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 40px;
+  background-color: rgb(35, 30, 30);
+  text-decoration: none; 
+  padding-left: 1em;
+  color: whitesmoke;
+
+}
+.footer-text-left {
+  font-size: 1.2em;
+  padding-left:40px;
+  float:left;
+  word-spacing:2px;
+  margin-bottom: 0.5em;
+}
+
+.footer-text-center {
+  font-size: 1.2em;
+  word-spacing:2px;
+  float: left;
+  text-align: center;
+
+}
+
+
+.footer-content-right {
+  padding-right:40px;
+  font-size: 1.5em;
+  margin-top:0.5em;
+  float:right;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-bottom: 0.5em;
+  
+}
+
+.fade-in-text {
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#time:hover {
+  color: darksalmon;
+}
+
+.icon-style {
+  margin-left:20px;
+}
+
+/* icon selector */
+.fa {
+  color: whitesmoke;
+}
+
+/* psuedo elements */
+.body-title:hover {
+  color: red;
+}
+p + li:hover {
+  color: green;
+}
+p:hover {
+  color: aqua;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+.link:hover { background-color: coral; border-radius: 5%; padding: 0.2em;}
+
+.button { background-color: coral; border-radius: 50em;}
+
+.icon-style:hover { opacity: 0.7;}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 17.5em) {
+  .column {
+    width: 100%;
+    display: grid;
+  }
+}
+/* fix bottom nav padding */
+body { padding-bottom: 50px; }
