@@ -20,7 +20,7 @@
   --background-color-old : -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
 }
 
-/* persian font face */
+/* persian font face
 @font-face {
   font-family: Vazirmatn;
   src: url('./fonts/Vazirmatn-Regular.woff2') format('woff2'),
@@ -39,10 +39,10 @@
 }
 
 /* english fontface */
-@font-face {
+/* @font-face {
   font-family: 'Roboto';
   src: url('./fonts/Roboto/Roboto-Regular.ttf') format('truetype'); 
-}
+} */
 
 
 /* body section  */
