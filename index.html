@@ -8,35 +8,43 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="./scripts/jquery-3.6.1.min.js"></script>
     <title>Daily Routine</title>
   </head>
   <body class="primary-margin">
     <div class="title primary-border">
       <h1 class="body-title">Daily Routine</h1></div>
     <div class="container english-content primary-border">
-      <ul dir="rtl" class="menu-margin">
+      <ul dir="ltr" class="menu-margin">
         <ul>
-          <li id="saturday">Saturday
-          <p></p>
-          </li>
-          <li id="sunday">Sunday
-          <p></p>
-        </li>
-          <li id="monday">Monday
-          <p></p>
-        </li>
-          <li id="tuesday">Tuesday
-          <p></p>
-        </li>
-          <li id="wednesday">Wednesday
-          <p></p>
-        </li>
-          <li id="thursday">Thursday
-          <p></p>
-        </li>
-          <li id="friday">Friday
-          <p></p>
-        </li>
+          <li class="form-title" id="saturday">Saturday</li>
+          <form action="">
+            <input type="text" id="saturday-text" class="form-control" name="saturday"><br>
+          </form>
+          <li class="form-title" id="sunday">Sunday</li>
+            <form action="">
+              <input type="text" id="sunday-text" class="form-control" name="sunday"><br>
+            </form> 
+          <li class="form-title" id="monday">Monday</li>
+            <form action="">
+              <input type="text" id="monday-text" class="form-control" name="monday"><br>
+            </form> 
+          <li class="form-title" id="tuesday">Tuesday</li>
+            <form action="">
+              <input type="text" id="tuesday-text" class="form-control" name="tuesday"><br>
+            </form> 
+          <li class="form-title" id="wednesday">Wednesday</li>
+            <form action="">
+              <input type="text" id="wednesday-text" class="form-control" name="wednesday"><br>
+            </form>
+          <li class="form-title" id="thursday">Thursday</li>
+            <form action="">
+              <input type="text" id="thursday-text" class="form-control" name="thursday"><br>
+            </form>        
+          <li class="form-title" id="friday">Friday</li>
+            <form action="">
+              <input type="text" id="friday-text" class="form-control" name="friday"><br>
+            </form>
           </ul>
     </div>
     <div class="row" style="padding-top: 1em;">
@@ -45,20 +53,30 @@
       <ul>
         <li>
           <li>
-            <p>_</p>
+            <form action="">
+              <input type="text" class="form-note" name="note1"><br>
+            </form>           
           </li>
           <li>
-            <p>_</p>
+            <form action="">
+              <input type="text" class="form-note" name="note2"><br>
+            </form>                
           </li>
           <li>
-            <p>_</p>
+            <form action="">
+              <input type="text" class="form-note" name="note3"><br>
+            </form>                
           </li>
           <li>
-            <p>_</p>
+            <form action="">
+              <input type="text" class="form-note" name="note4"><br>
+            </form>                
           </li>
           <li>
-            <p>_</p>
-          </li>
+            <form action="">
+              <input type="text" class="form-note" name="note"><br>
+            </form>               
+           </li>
         </li>
       </ul>
     </div>
@@ -67,20 +85,30 @@
       <ul>
         <li>
           <li>
-            <p>_</p>
+            <form action="">
+              <input type="text" class="form-note" name="req1"><br>
+            </form>           
           </li>
           <li>
-            <p>_</p>
+            <form action="">
+              <input type="text" class="form-note" name="req2"><br>
+            </form>                
           </li>
           <li>
-            <p>_</p>
+            <form action="">
+              <input type="text" class="form-note" name="req3"><br>
+            </form>                
           </li>
           <li>
-            <p>_</p>
+            <form action="">
+              <input type="text" class="form-note" name="req4"><br>
+            </form>                
           </li>
           <li>
-            <p>_</p>
-          </li>
+            <form action="">
+              <input type="text" class="form-note" name="req5"><br>
+            </form>               
+           </li>
         </li>
       </ul>
     </div>
@@ -113,6 +141,7 @@
         <a href="#" onclick="setLanguage('fa')">Persian</a> -->
       </div>
     </div>
-    <script type="module" src="./script.js"></script>
+    <script src="./scripts/jquery-persist.js"></script>
+    <script type="module" src="./scripts/script.js"></script>
   </body>
 </html>

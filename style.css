@@ -18,6 +18,9 @@
   --background-image: url(./images/background.jpg);
   --background-color: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   --background-color-old : -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+
+  /* form opacity */
+  --form-opacity : 0.2 ;
 }
 
 /* persian font face
@@ -62,14 +65,23 @@ body::after {
   background: var(--background-image);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   opacity: 0.1;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  position: absolute;
-  z-index: -1;   
+  position: fixed;
+  z-index: -1;
 }
+
+*[dir="rtl"] {
+  font-family: var(--persian-font-name);
+}
+*[dir="ltr"] {
+  font-family: var(--english-font-name);
+}
+
 
 /* primary margin used for consist margin across columns */
 .primary-margin {
@@ -104,6 +116,41 @@ body::after {
   list-style-type: none;
   list-style: none;
 }
+
+/* form style  */
+.form-title {
+  font-size: 1rem;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.form-control {
+  font-size: 1.5em;
+  border-radius: 0.5rem;
+  border : 1px;
+  background-color: rgba(0, 0, 0, var(--form-opacity));
+  color: white;
+  width: 85%;
+  padding: 0.7rem 0.7rem;
+  margin-bottom: 1%;
+  -webkit-box-shadow: 0 0 10px #444;
+	-moz-box-shadow: 0 0 10px #444;
+	box-shadow: 0 0 4px #444;
+}
+
+.form-note {
+  font-size: 1em;
+  border-radius: 0.5rem;
+  border : 1px;
+  background-color: rgba(0, 0, 0, var(--form-opacity));
+  color: white;
+  width: 85%;
+  padding: 0.7rem 0.7rem;
+  margin-bottom: 2%;
+  -webkit-box-shadow: 0 0 10px #444;
+	-moz-box-shadow: 0 0 10px #444;
+	box-shadow: 0 0 4px #444;
+}
+
 
 /* persian content are for chaging default persian font to vazirmatn */
 .persian-content {
