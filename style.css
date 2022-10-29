@@ -212,7 +212,8 @@ ul {
 }
 .footer-text-left {
   font-size: 1.2em;
-  padding-left:40px;
+  /* padding-left:40px; */
+  padding-right: 20px;
   float:left;
   word-spacing:2px;
   margin-bottom: 0.5em;
@@ -284,6 +285,9 @@ a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
 
 .link:hover { background-color: coral; border-radius: 5%; padding: 0.2em;}
+.link {
+  color: green;
+}
 
 .button { background-color: coral; border-radius: 50em;}
 
