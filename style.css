@@ -93,8 +93,8 @@ body::after {
 }
 
 .menu-margin {
-  margin-right: -5em;
-}
+  /* margin-left: var(--primary-margin); */
+  margin-right: var(--primary-margin);}
 
 /* primary border adds a border across content sections  */
 .primary-border {
@@ -129,7 +129,7 @@ body::after {
   border : 1px;
   background-color: rgba(0, 0, 0, var(--form-opacity));
   color: white;
-  width: 85%;
+  width: 100%;
   padding: 0.7rem 0.7rem;
   margin-bottom: 1%;
   -webkit-box-shadow: 0 0 10px #444;
